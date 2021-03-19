@@ -19,17 +19,14 @@ app.use(cors(corsOptions))
 app.use(router)
 router.get('/autor', (req, res) => {
     res.send({
-        autor2: 'MESV'
+        autor2: 'MESV',
+        servicio: ' EKS en AWS'
+
     })
 });
-router.get('/servicio', (req, res) => {
-    res.send({
-      servicio: ' Cloud Foundry en IBM Cloud'
-        
-    })
-});
+
 router.post('/metodo', (req, res) => {
-    const cadena = req.body.datos;
+   export const cadena = req.body.datos;
     console.log(cadena);
     res.sendFile(path.join(__dirname+'/src/html/index.html'));
 });

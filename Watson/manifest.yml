@@ -1,0 +1,8 @@
+---
+applications:
+- path: .
+  name: Examen1CloudManuel
+  buildpack: sdk-for-nodejs
+  instances: 1
+  memory: 256M
+  random-route: true

@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: testing-kube-deploy
+  name: examencloud1
   labels:
-    name: testing-kube-deploy
+    name: examencloud1
     app: testing-kube-app
 spec:
   replicas: 1
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: testing-kube-container
-          image: "<add-your-repo-uri>"
+          image: "103426005593.dkr.ecr.us-east-1.amazonaws.com/examen1"
           imagePullPolicy: Always
           resources:
             limits:
@@ -31,7 +31,7 @@ spec:
               cpu: "0.2"
           livenessProbe:
             httpGet:
-              path: /healthcheck
-              port: 4500
+              path: /autor
+              port: 5500
             initialDelaySeconds: 5
             periodSeconds: 5

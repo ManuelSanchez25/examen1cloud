@@ -8,6 +8,6 @@ RUN npm install
 # Bundle app source
 COPY . .
 # Expose the port to get access
-EXPOSE 4500
+EXPOSE 5500
 # Run the node command
 CMD [ "node", "app.js" ]

@@ -8,7 +8,7 @@ const { json, urlencoded } = express
 const app = express()
 
 const host = process.env.IP  || '0.0.0.0'
-const port = process.env.PORT || 4500
+const port = process.env.PORT || 5500
 
 app.use(json())
 app.use(urlencoded({ extended: false }))

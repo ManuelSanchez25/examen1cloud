@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: testing-kube-service-np
+  name: examencloud1manuel
   labels:
-    name: testing-kube-deploy
+    name: examencloud1
     app: testing-kube-app
 spec:
   type: NodePort

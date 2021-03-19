@@ -26,7 +26,7 @@ router.get('/autor', (req, res) => {
 });
 
 router.post('/metodo', (req, res) => {
-   export const cadena = req.body.datos;
+    const cadena = req.body.datos;
     console.log(cadena);
     res.sendFile(path.join(__dirname+'/src/html/index.html'));
 });

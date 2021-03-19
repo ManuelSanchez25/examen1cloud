@@ -27,7 +27,9 @@ const toneAnalyzer = new ToneAnalyzerV3({
   }),
   serviceUrl: URL,
 });
-
+app.get('/', (req, res) =>{
+  res.send('Examen Cloud. ToneAnalizer, Ingrese /autor para poder ver el servicio usado');
+})
 
 app.get('/autor', (req, res) => {
     res.send({
@@ -55,6 +57,8 @@ app.post('/metodo', JsonParser, (req, res) => {
         cadena = JSON.stringify(toneAnalysis.result);
             res.json(cadena);  
          // res.json(toneAnalysis.result.document_tone.tones);
+        //console.log(JSON.stringify(toneAnalysis, null, 2));
+
       })
       .catch(err => {
         res.json(err);
